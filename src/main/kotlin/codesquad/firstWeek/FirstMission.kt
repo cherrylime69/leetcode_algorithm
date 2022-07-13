@@ -44,7 +44,7 @@ class FirstMission {
         return answer
     }*/
 
-    fun solution(priorities: IntArray, location: Int): Int {
+   /* fun solution(priorities: IntArray, location: Int): Int {
         val que: Queue<Int> = LinkedList<Int>()
         que.addAll(priorities.toList())
         var answer = 0
@@ -73,6 +73,25 @@ class FirstMission {
         }
 
         return answer
+    }*/
+
+    fun solution(priorities: IntArray, location: Int): Int {
+        val printerList = priorities.withIndex().toMutableList()
+        var count = 0
+
+        while (printerList.isNotEmpty()) {
+            val header = printerList.removeFirst()
+            if (printerList.any { header.value < it.value }) {
+                printerList.add(header)
+                continue
+            }
+
+            count++
+            if (header.index == location) {
+                break
+            }
+        }
+        return count
     }
 
 }
