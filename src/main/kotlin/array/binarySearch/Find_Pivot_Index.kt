@@ -1,4 +1,4 @@
-package binarySearch
+package array.binarySearch
 
 fun main() {
     val find = Find_Pivot_Index()

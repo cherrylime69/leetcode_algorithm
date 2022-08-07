@@ -1,4 +1,4 @@
-package binarySearch
+package array.binarySearch
 
 //https://leetcode.com/problems/binary-search/
 //https://www.youtube.com/watch?v=Ix-7qWQr_RE&list=PLDV-cCQnUlIYFOXYzqLoXnEye4WxDa_30&index=3
